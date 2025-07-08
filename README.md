@@ -1,1 +1,1 @@
-# Assignment-02 Quote Generator
+# Assignment-02 Blog Summarizer
