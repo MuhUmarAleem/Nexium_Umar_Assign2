@@ -37,17 +37,17 @@ export async function POST(req: Request) {
   }
 }
 
-async function translateToUrdu(englishText: string, baseUrl: string): Promise<string> {
-  const res = await fetch(`${baseUrl}/api/chat`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      message: `Translate the following summary into Urdu:\n\n${englishText}`,
-    }),
-  });
+// async function translateToUrdu(englishText: string, baseUrl: string): Promise<string> {
+//   const res = await fetch(`${baseUrl}/api/chat`, {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({
+//       message: `Translate the following summary into Urdu:\n\n${englishText}`,
+//     }),
+//   });
 
-  const data = await res.json();
-  return data.response;
-}
+//   const data = await res.json();
+//   return data.response;
+// }
