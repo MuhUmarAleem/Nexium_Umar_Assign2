@@ -1,8 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Search, Globe, BookOpen, Sparkles, Link, CheckCircle } from 'lucide-react';
-
+import {
+  Search,
+  Globe,
+  BookOpen,
+  Sparkles,
+  Link,
+  CheckCircle,
+} from "lucide-react";
 
 export default function BlogSummarizer() {
   const [url, setUrl] = useState("");
@@ -139,7 +145,7 @@ export default function BlogSummarizer() {
                     <textarea
                       value={summary}
                       readOnly
-                      className="w-full h-48 resize-none border-none focus:ring-0 text-gray-700 leading-relaxed text-lg"
+                      className="w-full h-150 resize-none border-none focus:ring-0 text-gray-700 leading-relaxed text-lg"
                       style={{ outline: "none" }}
                     />
                   </div>
@@ -180,9 +186,10 @@ export default function BlogSummarizer() {
                     key={index}
                     className="flex items-start gap-3 p-3 bg-gray-50 rounded-xl"
                   >
-                    <div className="w-6 h-6 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold mt-0.5">
+                    <div className="w-6 h-6 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold">
                       {index + 1}
                     </div>
+
                     <div className="text-gray-700 leading-relaxed">{rule}</div>
                   </div>
                 ))}
